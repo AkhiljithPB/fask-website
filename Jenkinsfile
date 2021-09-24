@@ -11,7 +11,7 @@ pipeline {
    stages {
        stage('Build') {
            steps {
-               sh 'docker build -t akhiljith/flask:latest .'
+               sh 'docker build -t akhiljith/flask-app:latest .'
            }
        }
        stage('Login') {
@@ -21,7 +21,7 @@ pipeline {
        }
        stage('push') {
            steps {
-               sh 'docker push akhiljith/flask:latest'
+               sh 'docker push akhiljith/flask-app:latest'
            }
        }
    }
